@@ -9,10 +9,19 @@
 <p align="center">
   <a href="#description">Description</a> •
   <a href="#getting-started">Getting Started</a> •
-  <a href="#system-details">System Details</a> •
+  <a href="#detailed-report">Detailed Report</a> •
   <a href="#results">Results</a> •
   <a href="#references">References</a> 
 </p>
+
+<div align="center">
+
+|Rectified Stereo-Pair |            Disparity Map            | Depth Map 
+:--------------------:|:-----------------------------------:|:----------:
+![](./results/stereo_rectified/07.png) | ![](./results/disparity_map/07.png) | ![](./results/depth_map_img/07.png)
+
+
+</div>
 
 ## Description
 
@@ -81,3 +90,28 @@ poetry run python -m examples.perform_calibration_with_single_image_analysis --d
 This script randomly selects a stereo image pair, analyzes it by plotting detected markers, calculating and plotting
 reprojection errors, and visualizing rectified images, disparity maps, and depth maps. Finally, it saves the calibration
 results to [results](./results) folder and displays the analysis plots.
+
+## Detailed Report
+
+For a comprehensive overview of the stereo calibration process, stereo calibration results, and post-calibration
+analysis, please refer to the detailed [report](REPORT.md).
+
+## Results
+
+All the [rectified calibration images](./results/stereo_rectified), along with the
+corresponding [disparity maps](./results/disparity_map), [depth maps](./results/depth_map_img),
+and [raw depth maps](./results/raw_depth_map) for all stereo pairs in the calibration dataset, can be found in
+the [results](./results) folder.
+
+Below are some example rectified stereo-pair images, disparity maps, and depth maps:
+
+Rectified Stereo-Pair |            Disparity Map            | Depth Map 
+:--------------------:|:-----------------------------------:|:----------:
+![](./results/stereo_rectified/05.png) | ![](./results/disparity_map/05.png) | ![](./results/depth_map_img/05.png)
+![](./results/stereo_rectified/06.png) | ![](./results/disparity_map/06.png) | ![](./results/depth_map_img/06.png)
+![](./results/stereo_rectified/09.png) | ![](./results/disparity_map/09.png) | ![](./results/depth_map_img/09.png)
+
+## References
+* [OpenCV](https://docs.opencv.org/4.9.0/) 
+* [Zhang's Calibration Method](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr98-71.pdf)
+
