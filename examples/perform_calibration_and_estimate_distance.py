@@ -74,7 +74,7 @@ def main():
     utils.save_calibration_data(calib_results, output_dir)
     logger.info(f"Calibration results saved to {str(output_dir)}.")
 
-    distance_json_path = output_dir / "centre_distances.json"
+    distance_json_path = output_dir / "centre_image_distances_in_mm.json"
     distances_dict = estimate_distance_between_camera_and_image_centre(calib, calib_data=calib_results)
     save_json(distances_dict, str(distance_json_path))
     logger.success("Successfully computed distances (mm) between camera and image centre!")
