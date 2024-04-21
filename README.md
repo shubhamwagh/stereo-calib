@@ -107,7 +107,7 @@ the [results](./results) folder.
 
 Below are some example rectified stereo-pair images, disparity maps, and depth maps:
 
-         Rectified Stereo-Pair          |            Disparity Map            | Depth Map 
+|              Rectified Stereo-Pair     |            Disparity Map            | Depth Map |
 :--------------------------------------:|:-----------------------------------:|:----------:
  ![](./results/stereo_rectified/05.png) | ![](./results/disparity_map/05.png) | ![](./results/depth_map_img/05.png)
  ![](./results/stereo_rectified/06.png) | ![](./results/disparity_map/06.png) | ![](./results/depth_map_img/06.png)
