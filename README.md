@@ -89,8 +89,8 @@ To execute stereo camera calibration with single image analysis, run the followi
 poetry run python -m examples.perform_calibration_with_single_image_analysis --data-path "./dataset"
 ```
 
-This script randomly selects a stereo image pair, analyzes it by plotting detected markers, calculating and plotting
-reprojection errors, and visualizing rectified images, disparity maps, and depth maps. Finally, it saves the calibration
+This script randomly selects a stereo image pair, analyses it by plotting detected markers, calculating and plotting
+reprojection errors, and visualising rectified images, disparity maps, and depth maps. Finally, it saves the calibration
 results to [results](./results) folder and displays the analysis plots.
 
 ## Detailed Report
