@@ -121,6 +121,7 @@ def main():
 
     # save calibration data
     utils.save_calibration_data(calib_results, output_dir)
+    logger.info(f"Calibration results saved to {str(output_dir)}.")
 
     # display all plots
     plt.show()

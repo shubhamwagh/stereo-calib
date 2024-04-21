@@ -42,7 +42,7 @@ def main():
                                                                      output_dir)
     utils.save_calibration_data(calib_results, output_dir)
 
-    logger.info(f"Calibration results saved at {str(output_dir)}.")
+    logger.info(f"Calibration results saved to {str(output_dir)}.")
 
 
 if __name__ == "__main__":
