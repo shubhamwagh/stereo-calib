@@ -141,10 +141,12 @@ images, respectively.
 
 ### Camera Reprojection Errors
 
-We obtained an RMS error of 0.3, which ideally should be less than 0.4 for a well-calibrated system. The camera
+We obtained an RMS error of 0.3402, which ideally should be less than 0.4 for a well-calibrated system. The camera
 re-projection error plot illustrates a circular cluster centered around 0 for both cameras, indicating accurate and
 consistent calibration.
+
 ![Left Camera Reprojection Error](./results/calibration_analysis/left_reproject_error.png)
+
 ![Right Camera Reprojection Error](./results/calibration_analysis/right_reprojection_error.png)
 
 ### Left vs Right RMS error
@@ -152,4 +154,5 @@ consistent calibration.
 The plot below helps us easily identify the pair of images with poor corner re-projection performance. The worst
 performing pair of images will be in the top right and best performing on the bottom left. Each cross represents an
 image pair with the number next to it representing the pairs ID.
+
 ![](./results/calibration_analysis/left_error_vs_right_error.png)
