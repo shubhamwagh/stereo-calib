@@ -14,8 +14,8 @@
   <a href="#image-rectification">Image Rectification</a> •
   <a href="#disparity-map">Disparity Map</a> •
   <a href="#depth-map">Depth Map</a> •
-  <a href="#calibration-analysis">Calibration Analysis</a>
-
+  <a href="#calibration-analysis">Calibration Analysis</a> •
+  <a href="#references">References</a>
 </p>
 
 ## Introduction
@@ -115,7 +115,7 @@ the rectified images where all the pixels are valid ($validPixROI_1$, $validPixR
 
 After rectifying stereo image pairs, we compute disparity map using StereoSGBM (Semi-Global Block Matching) algorithm
 that compares small blocks of pixels in the left and right images to find the best match and calculate the disparity.
-The algorithm includes smoothing to avoid small speckles which further improves the quality of dispairty map. Finally,
+The algorithm includes smoothing to avoid small speckles which further improves the quality of disparity map. Finally,
 we apply a WLS (Weighted Least Squares) filter to further refine the disparity map, ensuring greater accuracy and
 clarity.
 
@@ -125,8 +125,7 @@ Utilizing the disparity map computed in the above step and the disparity-to-dept
 three-dimensional representation of the scene. We achieve this by employing the `cv2.reprojectImageTo3D` function, which
 seamlessly converts pixel disparities into spatial coordinates, effectively constructing a depth map. The
 $Q$ matrix encapsulates crucial parameters such as the baseline between stereo cameras and the formula for converting
-depth
-to disparity, typically represented as:
+depth to disparity, typically represented as:
 
 ```math
 depth = \frac{f. T}{disparity}
@@ -161,6 +160,8 @@ Original (Left/Right) Detected Corners  | Left Corners And Re-projected Points |
 
 #### Disparity Map And Depth Map
 
+The plot below illustrates the disparity map and depth map for the example stereo-pair images. For this particular stereo-pair, the distance from the camera to the center of the image is estimated to be around 0.92 meters.
+
 Disparity Map | Depth Map 
 :--------------:|:---------------------:
 ![](./results/calibration_analysis_for_stereo_pair_id_06/disparity_map.png) | ![](./results/calibration_analysis_for_stereo_pair_id_06/depth_map.png)
@@ -186,3 +187,7 @@ performing pair of images will be in the top right and best performing on the bo
 image pair with the number next to it representing the pairs ID.
 
 ![](./results/calibration_analysis/left_error_vs_right_error.png)
+
+## References
+* [OpenCV](https://docs.opencv.org/4.9.0/) 
+* [Zhang's Calibration Method](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr98-71.pdf)
