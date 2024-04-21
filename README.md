@@ -9,6 +9,7 @@
 <p align="center">
   <a href="#description">Description</a> •
   <a href="#getting-started">Getting Started</a> •
+  <a href="#calibration">Calibration</a> •
   <a href="#detailed-report">Detailed Report</a> •
   <a href="#results">Results</a> •
   <a href="#references">References</a> 
@@ -19,7 +20,6 @@
 |Rectified Stereo-Pair |            Disparity Map            | Depth Map 
 :--------------------:|:-----------------------------------:|:----------:
 ![](./results/stereo_rectified/07.png) | ![](./results/disparity_map/07.png) | ![](./results/depth_map_img/07.png)
-
 
 </div>
 
@@ -40,6 +40,8 @@ rectification, disparity map generation, and depth map estimation.
 poetry config virtualenvs.in-project true                  
 poetry install 
 ```
+
+## Calibration
 
 ### Perform Calibration : Save Rectified Images, Disparity and Depth Maps
 
@@ -94,7 +96,7 @@ results to [results](./results) folder and displays the analysis plots.
 ## Detailed Report
 
 For a comprehensive overview of the stereo calibration process, stereo calibration results, and post-calibration
-analysis, please refer to the detailed [report](REPORT.md).
+analysis, refer to the detailed [report](REPORT.md).
 
 ## Results
 
@@ -105,13 +107,14 @@ the [results](./results) folder.
 
 Below are some example rectified stereo-pair images, disparity maps, and depth maps:
 
-Rectified Stereo-Pair |            Disparity Map            | Depth Map 
-:--------------------:|:-----------------------------------:|:----------:
-![](./results/stereo_rectified/05.png) | ![](./results/disparity_map/05.png) | ![](./results/depth_map_img/05.png)
-![](./results/stereo_rectified/06.png) | ![](./results/disparity_map/06.png) | ![](./results/depth_map_img/06.png)
-![](./results/stereo_rectified/09.png) | ![](./results/disparity_map/09.png) | ![](./results/depth_map_img/09.png)
+         Rectified Stereo-Pair          |            Disparity Map            | Depth Map 
+:--------------------------------------:|:-----------------------------------:|:----------:
+ ![](./results/stereo_rectified/05.png) | ![](./results/disparity_map/05.png) | ![](./results/depth_map_img/05.png)
+ ![](./results/stereo_rectified/06.png) | ![](./results/disparity_map/06.png) | ![](./results/depth_map_img/06.png)
+ ![](./results/stereo_rectified/09.png) | ![](./results/disparity_map/09.png) | ![](./results/depth_map_img/09.png)
 
 ## References
-* [OpenCV](https://docs.opencv.org/4.9.0/) 
+
+* [OpenCV](https://docs.opencv.org/4.9.0/)
 * [Zhang's Calibration Method](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr98-71.pdf)
 
