@@ -1,0 +1,4 @@
+Marker Size: 3.846 cm
+Square Size: 4.933 cm
+Number of squaresX: 31
+Number of squaresY: 16
