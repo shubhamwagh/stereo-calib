@@ -41,7 +41,7 @@ poetry run python -m examples.perform_calibration --data-path "./dataset"
 ```
 
 This script generates rectified stereo images along with disparity and depth maps, saving the calibration results to a
-**results** folder.
+[results](./results) folder.
 
 ### Perform Calibration: Estimate Distance Between Camera And Image Centre
 
@@ -52,7 +52,8 @@ following command:
 poetry run python -m examples.perform_calibration_and_estimate_distance --data-path "./dataset"
 ```
 
-This scripts saves calibration results to **results** folder outputs the computed distances in millimeters to a JSON
+This scripts saves calibration results to [results](./results) folder outputs the computed distances in millimeters to a
+JSON
 file.
 
 ### Perform Calibration: Overall Calibration Analysis
@@ -65,7 +66,8 @@ poetry run python -m examples.perform_calibration_with_overall_analysis --data-p
 ```
 
 This script conducts post-calibration analysis, including calculating and plotting reprojection errors and root mean
-square (RMS) errors for both left and right camera views. Finally, it saves the calibration results and displays the
+square (RMS) errors for both left and right camera views. Finally, it saves the calibration results
+to [results](./results) folder and displays the
 analysis plots.
 
 ### Perform Calibration: Single Image Analysis
@@ -78,4 +80,4 @@ poetry run python -m examples.perform_calibration_with_single_image_analysis --d
 
 This script randomly selects a stereo image pair, analyzes it by plotting detected markers, calculating and plotting
 reprojection errors, and visualizing rectified images, disparity maps, and depth maps. Finally, it saves the calibration
-results and displays the analysis plots.
+results to [results](./results) folder and displays the analysis plots.
