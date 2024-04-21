@@ -22,7 +22,7 @@ def parse_args():
 
 
 def selected_image_analysis(calib: StereoCalibration, calib_data: utils.StereoCalibrationData) -> None:
-    image_id = 6# np.random.randint(0, len(calib.right_images_path))
+    image_id = np.random.randint(0, len(calib.right_images_path))
     left_image_path = calib.left_images_path[image_id]
     right_image_path = calib.right_images_path[image_id]
     logger.info(f"Performing post calibration analysis on images {left_image_path} and {right_image_path}")
@@ -62,7 +62,7 @@ def selected_image_analysis(calib: StereoCalibration, calib_data: utils.StereoCa
                                                             right_image,
                                                             calib_data,
                                                             display=True,
-                                                            draw_lines=True)
+                                                            draw_lines=False)
 
     left_rect_img, right_rect_img = rectified_img[:, :width], rectified_img[:, width:]
 
