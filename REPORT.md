@@ -53,4 +53,5 @@ image quality.
 ### Equations
 
 * **Intrinsic Parameters**: The camera matrix ($K$) includes the focal lengths ($f_x$) and ($f_y$) along the x and y axes, and
-  the principal point coordinates ($(c_x, c_y)$).
+  the principal point coordinates (($c_x$, $c_y$)).
+$K = \begin{bmatrix} f_x & 0 & c_x \\ 0 & f_y & c_y \\ 0 & 0 & 1 \end{bmatrix}$
