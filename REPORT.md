@@ -52,6 +52,16 @@ image quality.
 
 ### Equations
 
-* **Intrinsic Parameters**: The camera matrix ($K$) includes the focal lengths ($f_x$) and ($f_y$) along the x and y axes, and
+* **Intrinsic Parameters**: The camera matrix ($K$) includes the focal lengths ($f_x$) and ($f_y$) along the x and y
+  axes, and
   the principal point coordinates (($c_x$, $c_y$)).
-$K = \begin{bmatrix} f_x & 0 & c_x \\\ 0 & f_y & c_y \\\ 0 & 0 & 1 \end{bmatrix}$
+
+```math
+K = \begin{bmatrix} f_x & 0 & c_x \\ 0 & f_y & c_y \\ 0 & 0 & 1 \end{bmatrix}
+```
+
+* **Distortion Parameters**: Radial distortion coefficients ($k_1$, $k_2$, $k_3$) and tangential distortion
+  coefficients ($p_1$, $p_2$) are used to correct for image distortions caused by lens imperfections.
+* **Rational Model**: The rational model extends the distortion model by introducing additional coefficients ($k_4$,
+  $k_5$, $k_6$) to accommodate higher-order distortions, enhancing the model's ability to correct for complex lens
+  distortions.
