@@ -139,17 +139,28 @@ images, respectively.
 
 ## Calibration Analysis
 
-### Camera Reprojection Errors
+### Example Stereo-Pair Analysis
+
+* Example Stereo-Pair:
+
+![](./results/calibration_analysis_for_stereo_pair_id_06/stereo_pair.png)
+
+* 
+
+### Overall Analysis
+
+#### Camera Reprojection Errors
 
 We obtained an RMS error of 0.3402, which ideally should be less than 0.4 for a well-calibrated system. The camera
 re-projection error plot illustrates a circular cluster centered around 0 for both cameras, indicating accurate and
 consistent calibration.
 
-![Left Camera Reprojection Error](./results/calibration_analysis/left_reproject_error.png)
+Left Camera Reprojection Error | Right Camera Reprojection Error 
+:-----------------------------:|:------------------------------:
+![](./results/calibration_analysis/left_reproject_error.png) | ![](./results/calibration_analysis/right_reprojection_error.png)
 
-![Right Camera Reprojection Error](./results/calibration_analysis/right_reprojection_error.png)
 
-### Left vs Right RMS error
+#### Left vs Right RMS error
 
 The plot below helps us easily identify the pair of images with poor corner re-projection performance. The worst
 performing pair of images will be in the top right and best performing on the bottom left. Each cross represents an

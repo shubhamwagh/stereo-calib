@@ -22,7 +22,7 @@ def parse_args():
 
 
 def selected_image_analysis(calib: StereoCalibration, calib_data: utils.StereoCalibrationData) -> None:
-    image_id = np.random.randint(0, len(calib.right_images_path))
+    image_id = 6# np.random.randint(0, len(calib.right_images_path))
     left_image_path = calib.left_images_path[image_id]
     right_image_path = calib.right_images_path[image_id]
     logger.info(f"Performing post calibration analysis on images {left_image_path} and {right_image_path}")
@@ -62,7 +62,7 @@ def selected_image_analysis(calib: StereoCalibration, calib_data: utils.StereoCa
                                                             right_image,
                                                             calib_data,
                                                             display=True,
-                                                            draw_lines=False)
+                                                            draw_lines=True)
 
     left_rect_img, right_rect_img = rectified_img[:, :width], rectified_img[:, width:]
 
@@ -72,24 +72,6 @@ def selected_image_analysis(calib: StereoCalibration, calib_data: utils.StereoCa
                                         disparity_to_depth_matrix=calib_data.perspective_transformation_matrix_Q)
     utils.plot_depth_map(depth_map)
     utils.plot_disparity_map(disparity)
-    # plt.show()
-
-
-def overall_calibration_analysis(calib: StereoCalibration, calib_data: utils.StereoCalibrationData) -> None:
-    overall_errors = {}
-    for camera_data, image_pts, camera_side in zip(
-            [calib_data.left_camera_calibration_data, calib.right_camera_calib_results],
-            [calib.stereo_charuco_points_l, calib.stereo_charuco_points_r],
-            ['Left', 'Right']):
-        projected_pts, reprojection_error, rms_errors = utils.calculate_reprojection_errors_for_all_images(
-            all_obj_pts=calib.stereo_obj_points,
-            all_image_pts=image_pts,
-            camera_calib_results=camera_data)
-
-        utils.plot_reprojection_errors(reprojection_error, camera_side)
-        overall_errors[camera_side] = rms_errors
-
-    utils.plot_left_right_errors(left_errors=overall_errors['Left'], right_errors=overall_errors['Right'])
     # plt.show()
 
 
