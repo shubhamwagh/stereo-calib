@@ -8,7 +8,7 @@ ARUCO_DICT: int = cv2.aruco.DICT_4X4_250
 SQUARES_VERTICALLY: int = 16
 SQUARES_HORIZONTALLY: int = 31
 
-# Length of each square on the calibration board and length of the markers
+# Length of each square on the calibration board and length of the markers (in metres)
 SQUARE_LENGTH: float = 0.04933
 MARKER_LENGTH: float = 0.03846
 
