@@ -141,11 +141,30 @@ images, respectively.
 
 ### Example Stereo-Pair Analysis
 
-* Example Stereo-Pair:
+#### Rectified Stereo-Pair
 
-![](./results/calibration_analysis_for_stereo_pair_id_06/stereo_pair.png)
+The rectified stereo pair below shows that the horizontal lines are now aligned between the left and right images.
 
-* 
+Raw Stereo-Pair | Rectified Stereo-Pair 
+:--------------:|:---------------------:
+![](./results/calibration_analysis_for_stereo_pair_id_06/stereo_pair.png) | ![](./results/calibration_analysis_for_stereo_pair_id_06/stereo_pair_rectified.png)
+
+#### Detected And Reprojected Points
+
+The below plot illustrates re-projected corner points over detected corner points. 
+It can be seen that none of the detected corners (blue dots) is visible. This validates that the calibration was successful.
+
+Original (Left/Right) Detected Corners  | Left Corners And Re-projected Points | Right Corners And Re-projected Points
+:--------------------------------------:|:------------------------------------:|:-------------------------------------:
+![](./results/calibration_analysis_for_stereo_pair_id_06/original_charuco_corners.png) | ![](./results/calibration_analysis_for_stereo_pair_id_06/left_corners_and_reprojected_points.png) | ![](./results/calibration_analysis_for_stereo_pair_id_06/right_corners_and_reprojected_points.png)
+
+
+#### Disparity Map And Depth Map
+
+Disparity Map | Depth Map 
+:--------------:|:---------------------:
+![](./results/calibration_analysis_for_stereo_pair_id_06/disparity_map.png) | ![](./results/calibration_analysis_for_stereo_pair_id_06/depth_map.png)
+
 
 ### Overall Analysis
 
