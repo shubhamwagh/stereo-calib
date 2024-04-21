@@ -10,7 +10,7 @@
   <a href="#introduction">Introduction</a> •
   <a href="#dataset">Dataset</a> •
   <a href="#intrinsic-parameter-estimation">Intrinsic Parameter Estimation</a> •
-  <a href="#results">Results</a> •
+  <a href="#extrinsic-parameter-estimation">Extrinsic Parameter Estimation</a> •
   <a href="#references">References</a> 
 </p>
 
@@ -24,8 +24,9 @@ The process encompasses:
 
 * **Intrinsic Parameter Estimation**: Determining the internal characteristics of the camera, such as focal length,
   optical centre and distortion coefficients, which are crucial for converting camera coordinates to pixel coordinates.
-* **Extrinsic Parameter Estimation**: Converting world coordinates to camera coordinates, including the rotation
-  matrix (R) and translation matrix (T).
+* **Extrinsic Parameter Estimation**: Determining the rotation
+  matrix ($R$) and translation matrix ($T$) of the left camera coordinate system with respect to the right camera coordinate
+  system.
 * **Image Rectification**: Aligning the optical axes of the two cameras to ensure accurate stereo vision by making the
   images line-aligned.
 * **Disparity Map Calculation**: Computing the disparity map, which represents the difference in the x-coordinate of the
@@ -65,3 +66,14 @@ K = \begin{bmatrix} f_x & 0 & c_x \\ 0 & f_y & c_y \\ 0 & 0 & 1 \end{bmatrix}
 * **Rational Model**: The rational model extends the distortion model by introducing additional coefficients ($k_4$,
   $k_5$, $k_6$) to accommodate higher-order distortions, enhancing the model's ability to correct for complex lens
   distortions.
+* **Optimisation**: The calibration process optimises both intrinsic and distortion parameters using iterative
+  algorithms (based on least-squares method) like Levenberg-Marquardt to minimize reprojection error. We
+  use `cv2.aruco.calibrateCameraCharuco` that leverages Charuco detected corners to ensure accurate parameter
+  estimation.
+
+For robust calibration, it is recommended to detect a minimum of 5 to 10 corners (points) per image on the Charuco
+board.
+Given the dataset consisting of 39 stereo pairs of images, detecting more points per image will enhance the accuracy and
+robustness of the camera calibration. Additionally, we ensure the utilization of Charuco corner points that are commonly
+visible by both cameras, thereby reinforcing the consistency and reliability of the calibration process.
+
