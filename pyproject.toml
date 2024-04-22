@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "stereo-calib"
 version = "0.1.0"
-description = ""
+description = "Calibration for Stereo Cameras"
 authors = ["Shubham Wagh <shubhamwagh48@gmail.com>"]
 readme = "README.md"
 
