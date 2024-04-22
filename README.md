@@ -105,6 +105,10 @@ corresponding [disparity maps](./results/disparity_map), [depth maps](./results/
 and [raw depth maps](./results/raw_depth_map) for all stereo pairs in the calibration dataset, can be found in
 the [results](./results) folder.
 
+Additionally, the calibration results, containing camera matrices, distortion coefficients, rectification transforms, 
+projection matrices, and disparity-to-depth mapping matrices, are stored in a JSON file [here](./results/calibration_results.json). 
+Moreover, the distance between the camera and the center of the image for all calibration images is also saved in a separate JSON file [here](./results/centre_image_distances_in_mm.json).
+
 Below are some example rectified stereo-pair images, disparity maps, and depth maps:
 
 |              Rectified Stereo-Pair     |            Disparity Map            | Depth Map |
