@@ -72,7 +72,7 @@ K = \begin{bmatrix} f_x & 0 & c_x \\ 0 & f_y & c_y \\ 0 & 0 & 1 \end{bmatrix}
   $k_5$, $k_6$) to accommodate higher-order distortions, enhancing the model's ability to correct for complex lens
   distortions.
 * **Optimisation**: The calibration process optimises both intrinsic and distortion parameters using iterative
-  algorithms (based on least-squares method) like Levenberg-Marquardt to minimize reprojection error. We
+  algorithms (based on least-squares method) like Levenberg-Marquardt to minimise reprojection error. We
   use `cv2.aruco.calibrateCameraCharuco` that leverages Charuco detected corners to ensure accurate parameter
   estimation.
 
@@ -122,7 +122,7 @@ clarity.
 
 ## Depth Map
 
-Utilizing the disparity map computed in the above step and the disparity-to-depth mapping matrix ($Q$), we generate a
+Utilising the disparity map computed in the above step and the disparity-to-depth mapping matrix ($Q$), we generate a
 three-dimensional representation of the scene. We achieve this by employing the `cv2.reprojectImageTo3D` function, which
 seamlessly converts pixel disparities into spatial coordinates, effectively constructing a depth map. The
 $Q$ matrix encapsulates crucial parameters such as the baseline between stereo cameras and the formula for converting
