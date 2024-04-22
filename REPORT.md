@@ -130,6 +130,8 @@ depth to disparity, typically represented as:
 
 ```math
 depth = \frac{f. T}{disparity}
+```
+```math
 disparity = u_L - u_R
 ```
 
