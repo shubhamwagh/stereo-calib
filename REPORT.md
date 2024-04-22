@@ -93,6 +93,7 @@ obtained in the previous step serve as initialisation.
 * **Initial Parameters**: Calibrated camera matrices, distortion coefficients, object points and corresponding image
   points from both cameras.
 * **Rational Model**: The same camera model (`cv2.CALIB_RATIONAL_MODEL`) is utilised.
+* **Epipolar Geometry Basis**: Grounded in epipolar geometry, the calibration process accurately evaluates the relative positioning and orientation of the cameras. By utilising corresponding points in the left and right images, alongside their known 3D coordinates, the algorithm computes the relative rotation and translation between the cameras.
 * **Optimisation**: The function optimises the camera matrices and distortion coefficients to minimise the re-projection
   error between corresponding points in the left and right images, which is the difference between the observed and
   projected points.
@@ -190,4 +191,5 @@ image pair with the number next to it representing the pairs ID.
 
 ## References
 * [OpenCV](https://docs.opencv.org/4.9.0/) 
+* [Multi-View Geometry in Computer Vision](https://www.robots.ox.ac.uk/~vgg/hzbook/)
 * [Zhang's Calibration Method](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr98-71.pdf)

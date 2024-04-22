@@ -116,5 +116,6 @@ Below are some example rectified stereo-pair images, disparity maps, and depth m
 ## References
 
 * [OpenCV](https://docs.opencv.org/4.9.0/)
+* [Multi-View Geometry in Computer Vision](https://www.robots.ox.ac.uk/~vgg/hzbook/)
 * [Zhang's Calibration Method](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr98-71.pdf)
 
